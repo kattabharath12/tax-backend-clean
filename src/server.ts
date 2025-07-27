@@ -24,7 +24,7 @@ dotenv.config();
 
 const app = express();
 app.set('trust proxy', 1);
-const PORT = process.env.PORT || 8000;
+const PORT = parseInt(process.env.PORT || '8000', 10);
 
 // IMPORTANT: Trust proxy settings for Railway deployment
 // Railway uses a reverse proxy, so we need to trust it
