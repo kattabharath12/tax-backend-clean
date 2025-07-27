@@ -22,6 +22,7 @@ import { logger } from './utils/logger';
 dotenv.config();
 
 const app = express();
+app.set('trust proxy', true);
 const PORT = process.env.PORT || 8000;
 
 // Security middleware
