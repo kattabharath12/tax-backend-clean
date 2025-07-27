@@ -52,7 +52,7 @@ router.post('/signup', [
       }
     });
 
-    logger.info(New user registered: ${email});  // ← FIXED: Added backticks
+    logger.info('New user registered: ' + email);  // ← FIXED: Added backticks
 
     res.status(201).json({
       message: 'User created successfully',
@@ -108,7 +108,7 @@ router.post('/signin', [
       { expiresIn: '30d' }
     );
 
-    logger.info(User signed in: ${email});  // ← FIXED: Added backticks
+   logger.info('User signed in: ' + email);  // ← FIXED: Added backticks
 
     res.json({
       token,
