@@ -5,10 +5,10 @@
   "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "prisma migrate deploy && node dist/server.js",
     "dev": "ts-node src/server.ts",
-    "postinstall": "prisma generate && prisma migrate deploy",
-    "db:migrate": "prisma migrate deploy",
+    "postinstall": "prisma generate"
+  }
     "db:seed": "ts-node prisma/seed.ts",
     "db:studio": "prisma studio",
     "lint": "eslint src/*/.ts",
